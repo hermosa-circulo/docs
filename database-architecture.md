@@ -42,7 +42,31 @@ fitness  |                          | view 3D models
     |          Key / Value Store          |
     ---------------------------------------
 ```
+or
+
+```
+
+      -------------------------------------
+      |                UI                  |
+      -------------------------------------
+ update  |  |                        | |
+fitness  |  | Responce     Request   | |view 3D models
+ param   |  |             with genes | |
+    --------------   --------   -----------
+    |   IGA      |---|  DB  |---|  Model  |
+    | Controller |   | mysql|   | Creator |
+    --------------   --------   -----------
+         |                          
+         | update genes             
+         |                         
+    ---------------------------------------
+    |          Key / Value Store          |
+    ---------------------------------------
+```
+
 
 ## lock rule
-If 
-We need block 
+When multiple users access to IGA controller simultaneously,  
+exclusive control is needed with Genes.
+
+
